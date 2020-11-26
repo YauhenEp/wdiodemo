@@ -1,11 +1,11 @@
 const {Given, When} = require('cucumber');
 const MainPage = require('../pageobjects/mainPage').default;
 
-Given(/^Go to applications (.*)$/, function (url) {
-    MainPage.openApp(url);
+Given(/^Open application$/, function () {
+    MainPage.openApp('https://www-uk-dx.bodendev.com/');
 });
 
-When(/^I search (.*)$/, {timeout:30000}, function(value) {
+When(/^I search for "(.*)"$/, {timeout:30000}, function(value) {
     MainPage.searchItem(value);
 });
 

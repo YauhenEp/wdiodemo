@@ -1,10 +1,10 @@
 Feature: Check search functionality
 
   Background:
-    Given Go to applications https://www.boden.co.uk
+    Given Open application
 
   Scenario: Enter a search for "stripy leggings", filtered by women
-    When I search stripy leggings
-    And I add Women filter
-    Then Filter Women is active
-    And Field search result is equal stripy leggings
+    When I search for "stripy leggings"
+    And  I set filter to "Women"
+    Then Field search result should contain "stripy leggings"
+    And Filter should be set to "Women"
