@@ -53,4 +53,7 @@ exports.config = {
             browser.takeScreenshot();
         }
     },
+    afterTest() {
+        browser.reloadSession();
+    }
 }
