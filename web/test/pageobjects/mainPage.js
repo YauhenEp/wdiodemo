@@ -16,6 +16,15 @@ class MainPage extends Page {
         this.searchField.addValue(value);
         browser.keys('\uE007');
     }
+
+    searchItemTwo(value) {
+        this.searchButton.waitForClickable();
+        this.searchButton.click();
+        this.searchField.waitForDisplayed();
+        this.searchField.clearValue();
+        this.searchField.addValue(value);
+        browser.keys('\uE007');
+    }
 }
 
 exports.default = new MainPage();
