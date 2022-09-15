@@ -33,6 +33,10 @@ class MainPage extends Page {
     async divide(one, two) {
         return one / two;
     }
+    
+    async add(one, two) {
+        return one + two;
+    }
 }
 
 exports.default = new MainPage();
