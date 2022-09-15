@@ -25,6 +25,10 @@ class MainPage extends Page {
         this.searchField.addValue(value);
         browser.keys('\uE007');
     }
+
+    async multiply(one, two) {
+        return one * two;
+    }
 }
 
 exports.default = new MainPage();
