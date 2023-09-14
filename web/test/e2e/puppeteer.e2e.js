@@ -2,7 +2,7 @@ describe('my e2e tests', () => {
     // ...
 
     it('replaces the WebdriverIO logo with the Puppeteer logo', async () => {
-        browser.url('https://webdriver.io')
+        await browser.url('https://webdriver.io')
 
         /**
          * run Puppeteer code with promises to intercept network requests
@@ -10,7 +10,7 @@ describe('my e2e tests', () => {
          */
         const wdioLogo = 'webdriverio.png';
         const pptrLogo = 'https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png'
-        browser.call(async () => {
+        await browser.call(async () => {
             const puppeteerBrowser = await browser.getPuppeteer();
             const page = (await puppeteerBrowser.pages())[0];
             await page.setRequestInterception(true);
@@ -22,8 +22,8 @@ describe('my e2e tests', () => {
         });
 
         // continue with sync WebdriverIO commands
-        browser.refresh();
-        browser.pause(2000)
+        await browser.refresh();
+        await browser.pause(2000)
     });
 
     // it('by using async/await', async () => {
