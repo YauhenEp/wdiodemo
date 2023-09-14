@@ -22,8 +22,8 @@ describe('my e2e tests', () => {
         });
 
         // continue with sync WebdriverIO commands
-        browser.refresh();
-        browser.pause(2000)
+        await browser.refresh();
+        await browser.pause(2000)
     });
 
     // it('by using async/await', async () => {
