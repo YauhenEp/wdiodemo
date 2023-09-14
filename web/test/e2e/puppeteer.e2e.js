@@ -1,7 +1,7 @@
 describe('my e2e tests', () => {
     // ...
 
-    it('replaces the WebdriverIO logo with the Puppeteer logo', () => {
+    it('replaces the WebdriverIO logo with the Puppeteer logo', async () => {
         browser.url('https://webdriver.io')
 
         /**

@@ -4,3 +4,5 @@ mobile-framework/.tmp
 mobile-framework/bin/chromedriver.exe
 .vscode
 node_modules
+.idea
+.idea/
