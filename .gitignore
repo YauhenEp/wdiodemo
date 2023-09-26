@@ -6,3 +6,4 @@ mobile-framework/bin/chromedriver.exe
 node_modules
 .idea
 .idea/
+/hello
